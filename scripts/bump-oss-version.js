@@ -72,12 +72,13 @@ if (nightlyBuild) {
   // - check that argument version matches branch
   // e.g. 0.33.1 or 0.33.0-rc4
   version = argv._[0];
-  if (!version || version.indexOf(versionMajor) !== 0) {
+  echo(version);
+  /*if (!version || version.indexOf(versionMajor) !== 0) {
     echo(
       `You must pass a tag like 0.${versionMajor}.[X]-rc[Y] to bump a version`,
     );
     exit(1);
-  }
+  }*/
 }
 
 // Generate version files to detect mismatches between JS and native.
